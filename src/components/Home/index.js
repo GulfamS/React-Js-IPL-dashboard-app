@@ -14,7 +14,7 @@ class Home extends Component {
 
   getTeams = async () => {
     const response = await fetch(apiUrl)
-    const data = response.json()
+    const data = await response.json()
     const formatedData = data.teams.map(team => ({
       name: team.name,
       id: team.id,
